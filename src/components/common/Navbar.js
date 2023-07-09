@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <NavLink className="navbar-brand" to="/">
-        Greendzine 
+        Demo App 
       </NavLink>
       <button
         className="navbar-toggler"

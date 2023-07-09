@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 
 
 export default function Feedback(props) {
-  const { id, first_name, avatar } = props.avatar;
+  const { id, first_name,last_name, avatar } = props.avatar;
   
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -20,13 +20,13 @@ export default function Feedback(props) {
           {first_name.charAt(0)}
         </Avatar>
       }    
-      subheader={id}
+      subheader={first_name + " " + last_name}
     />
     <CardMedia
       component="img"
       height="200"
       image={avatar}
-      alt="Paella dish"
+      alt={first_name + " " + last_name}
     />
     <CardContent>
       <Typography variant="body2" color="text.secondary">

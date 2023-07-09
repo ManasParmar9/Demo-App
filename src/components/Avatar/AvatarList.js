@@ -16,6 +16,7 @@ export default function AvatarList() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+
   useEffect(()=>{
     setcurrentSelectedAvatar(data);
   },[data]);
@@ -31,6 +32,9 @@ export default function AvatarList() {
   };
 
   const handleOnSearch = (string, results) => {
+    /* console.log("string : ", string) */
+    console.log("results : ", results)
+    
     if(string.length > 0){
       setcurrentSelectedAvatar(data.filter((item) => {
         return results.some((childItem) => childItem.id === item.id);
@@ -42,6 +46,7 @@ export default function AvatarList() {
   }
 
   const handleOnSelect = (item) => {
+    console.log("item : ",item);
     setcurrentSelectedAvatar(currentSelectedAvatar.filter(avatar => avatar.id === item.id));
   }
 
@@ -67,11 +72,11 @@ export default function AvatarList() {
             onClear={()=> {setcurrentSelectedAvatar(data)}}
             autoFocus
             formatResult={formatResult}
-            styling={{ zIndex : 5 }}
+            styling={{ zIndex : 1 }}
           />
         </div>
        </div>
-        <div className="row" style={{ zIndex : 4 }}>
+        <div className="row">
           {currentSelectedAvatar?.map((item) => {
             return (
               <div className="col-md-3 p-4" key={item.id}>
