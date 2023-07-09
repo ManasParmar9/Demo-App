@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 
 
 export default function Feedback(props) {
-  const { id, first_name,last_name, avatar } = props.avatar;
+  const { first_name,last_name, avatar } = props.avatar;
   
   return (
     <Card sx={{ maxWidth: 345 }}>
